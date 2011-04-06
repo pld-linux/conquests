@@ -1,0 +1,11 @@
+--- conquests_src-orig/makefile_conquests	2011-04-06 09:31:15.252953957 +0200
++++ conquests_src/makefile_conquests	2011-04-06 09:50:14.825216742 +0200
+@@ -15,7 +15,7 @@
+ 	$(CC) $(CCFLAGS) $(LINKPATH) $(LIBS) -o $(APP) $(OFILES)
+ 
+ .cpp.o:
+-	$(CC) $(CCFLAGS) -O2 $(INC) -c $< -o $@
++	$(CC) $(CCFLAGS) $(INC) $(LIBS) -c $< -o $@
+ clean:
+ 	rm -f $(OFILES)
+ 	rm $(APP)
