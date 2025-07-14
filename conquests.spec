@@ -28,7 +28,7 @@ Körökre osztott stratégiai játék, a Civilization-hoz hasonló.
 
 %prep
 %setup -q -n %{name}_src
-%patch0 -p1
+%patch -P0 -p1
 %{__sed} -i "s@lua5\.1/@@" conquests/game.h
 
 %build
